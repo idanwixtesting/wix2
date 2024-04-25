@@ -1,0 +1,23 @@
+
+import { authentication } from 'wix-members-backend';
+
+export  function test1() {
+  return "success"
+
+}
+
+export function multiply(factor1, factor2) {
+   return factor1 * factor2;
+}
+
+
+
+export function myRegisterMemberFunction(email, password, options) {
+  return authentication.register(email, password, options)
+    .then((registrationResult) => {
+      return registrationResult;
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+}
